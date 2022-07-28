@@ -1,0 +1,17 @@
+*.egg-info
+data/*
+docs
+generated
+networks/*
+tests
+src/*
+bin/misc
+bin/mc.jpeg
+bin/Untitled*
+bin/inter*
+results/
+bin/__py*
+bin/misc*
+
+
+
