@@ -1,15 +1,17 @@
 *.egg-info
-data/*
+data/**
+!data/README.md
 docs
 generated
-networks/*
+networks/**
 tests
-src/*
+src/**
 bin/misc
 bin/mc.jpeg
 bin/Untitled*
 bin/inter*
-results/
+results/**
+!results/README.md
 bin/__py*
 bin/misc*
 
