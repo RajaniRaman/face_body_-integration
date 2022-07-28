@@ -1,3 +1,3 @@
-# project_yordanka
+# Face-body integration 
 
-Integration of face and body in deep convolutional neural networks 
+Integration of face and body in the deep convolutional neural networks 
