@@ -4,6 +4,7 @@ data/**
 docs
 generated
 networks/**
+!networks/README.md
 tests
 src/**
 bin/misc
