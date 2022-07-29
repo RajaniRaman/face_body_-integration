@@ -1,6 +1,8 @@
+%%  response of CNNs to the natural and unnatural face-body stimuli
 
-%%%%%%%%%%%% deepnet model%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+clear all; close all;
 
+%%%---deepnet model
 network = 'alexnet_caffe';
 % network = 'alexnet';
 % network = 'alexnet_untrained';
@@ -37,7 +39,6 @@ impath = '../data/500_sq';
 face_imds = imageDatastore(impath, 'ReadFcn', @(x) rescaleImage(x, in_imsize));
 figure; montage(face_imds, 'Indices', 115:121, 'DisplayRange', [0,5]);
 
-%%
 % response from the deepnet
 resp = cell(length(layers), 1);
 for ilayer = progress(1:length(layers))
@@ -47,8 +48,8 @@ end
 
 % save response for later use
 save(sprintf('../results/data/net_resp/%s_%s_resp_from_matlab_500.mat', network, cond), 'resp');
-%%
 
+%%%--- Helper functions
 function f_img = rescaleImage(file, size)
     img = imread(file);
     img = im2double(img);
